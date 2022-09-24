@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %} Create exercise {% endblock %}
+
+{% block content %}
+<div>
+    <h1>Создание задания</h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div>
+            <input type="text" name="Name" placeholder="Name of exercise">
+        </div>
+
+        <div>
+            <textarea name="Exercise" placeholder="Exercise"></textarea>
+        </div>
+
+        <div>
+            <button type="submit">Создать задание!</button>
+        </div>
+    </form>
+    {{ message }}
+</div>
+<!--{% for i in all_exercise %}-->
+
+<!--{% endfor %}-->
+{% endblock  %}

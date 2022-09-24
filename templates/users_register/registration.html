@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Registration {% endblock %}
+
+{% block content %}
+    <h1 style="">Регистрация</h1>
+    <div style="margin-top: 10px;">
+        <form id="RegisterForm" action="" method="POST">
+            {% csrf_token %}
+
+            <div style="margin-top: 10px;">
+                <input type="text" name="Name" placeholder="Name of user">
+            </div>
+
+            <div style="margin-top: 2px;">
+                <input type="password" name="Password" placeholder="Password">
+            </div>
+
+            <div style="margin-top: 5px;">
+                <button type="submit">Зарегистрироваться!</button>
+            </div>
+        </form>
+    </div>
+{% if message %}
+{{ message }}
+{% endif %}
+
+{% endblock  %}

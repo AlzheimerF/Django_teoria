@@ -19,6 +19,7 @@ from accounts.views import login_view
 
 urlpatterns = [
     path('', include('posts.urls')),
+    path('', include('ToDo.urls')),
     path('admin/', admin.site.urls),
     path('login/', login_view),
 ]
